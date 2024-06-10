@@ -16,6 +16,7 @@ Accurate segmentation of the fetal head and pubic symphysis in intrapartum ultra
 
 <img src="imgs/performance.png" title="preformance" style="zoom:8%;" align="left"/>
 <br>
+
 ## Environment
 
 - GPU: NVIDIA GeForce RTX3090 GPU
