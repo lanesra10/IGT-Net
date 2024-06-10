@@ -1,23 +1,12 @@
 # Uncertainty Estimation in Intrapartum Ultrasound: The IGT-Net Network
 
-Official pytorch code for "Uncertainty Estimation in Intrapartum Ultrasound: The IGT-Net Network"
+Official pytorch code for "Uncertainty-Fetal Head and Pubic Symphysis Segmentation with Enhanced Multi-Scale Features and Sparse Visual Graph Attention"
 
 - [✔] Code release
 - [❌] Paper release
 
 ## Abstract
-This paper details the IGT-Net architecture, designed for uncertainty estimation in obstetric ultrasound imaging. 
-IGT-Net incorporates Spatial Vector Gradient Attention (SVGA) and Neighborhood Attention Transformer (NAT) into InceptionNext, 
-achieving high performance in segmenting and locating the pubic symphysis and fetal head. SVGA enhances computational 
-efficiency and global feature extraction, while the NAT-based decoder improves the model's perception of segmentation 
-targets, especially in complex or noisy environments. Using Test-Time Augmentation (TTA), IGT-Net evaluates variations 
-in model output, allowing uncertainty measurement. The experimental results demonstrate the effectiveness of this 
-approach with metrics including JS at 89.11%±0.64%, DicePS at 87.64%±0.85%, DiceFH at 94.77%±0.37%, DiceAll at 
-94.15%±0.41%, ASDPS at 1.53±0.12, ASDFH at 2.15±0.15, and ASDAll at 1.98±0.13. These scores are among the highest 
-in obstetric ultrasound segmentation. In generalization experiments, IGT-Net's uncertainty estimation strategy showed 
-excellent segmentation performance across different datasets, indicating robustness and broad applicability in obstetrics. 
-Overall, the IGT-Net and TTA combination provides high confidence in segmentation results, offering a significant advancement 
-in obstetric ultrasound imaging.
+Accurate segmentation of the fetal head and pubic symphysis in intrapartum ultrasound images are crucial for prognosis prediction and complication prevention during delivery. However, due to the poor quality of intrapartum ultrasound imaging, blurred object boundaries, and strong artifacts, manual segmentation is time-consuming and laborious even for experienced experts, and current deep learning methods lack expressiveness and transparency, resulting in obstetricians' lack of confidence in the segmentation results. In this paper, a new method is proposed for the uncertain segmentation of fetal head and pubic symphysis in intrapartum ultrasound images. First, we introduce an improved Inception block in the encoder. Compared with traditional convolution operations, it helps the model obtain multi-scale features under different receptive fields while effectively reducing the amount of calculations. Second, we introduce a graph-based sparse attention method called Sparse Visual Graph Attention (SVGA). Compared with existing attention mechanisms, it is able to obtain the structure of the graph before inference. In addition, SVGA can avoid reshaping operations when performing graphics convolution to effectively reduce computational overhead. Then, in the decoder, we introduce the Neighborhood Attention Transformer (NAT). NAT can limit the self-attention range to adjacent pixels and adopt a sliding window mode to make the model achieve stronger time and space complexity. Finally, we use test-time augmentation to perturb the model input, evaluate the changes in the model for different inputs, and finally output an uncertainty measure. The effectiveness of our approach was validated through experiments on two datasets. Compared with existing methods, our model demonstrated competitive performance. The proposed model significantly improved automatic segmentation accuracy, reduced errors, and provided substantial support for ultrasound physicians in clinical settings.
 
 ### IGT-Net:
 
