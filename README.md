@@ -1,4 +1,4 @@
-# Uncertainty Estimation in Intrapartum Ultrasound: The IGT-Net Network
+# Uncertainty-Fetal Head and Pubic Symphysis Segmentation with Enhanced Multi-Scale Features and Sparse Visual Graph Attention
 
 Official pytorch code for "Uncertainty-Fetal Head and Pubic Symphysis Segmentation with Enhanced Multi-Scale Features and Sparse Visual Graph Attention"
 
